@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Uzam Fashion</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            background:#fffafc;
+        }
+
+        header{
+            background: linear-gradient(90deg, #d4145a, #fbb03b);
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+
+        .logo{
+            font-size:30px;
+            font-weight:bold;
+            letter-spacing:2px;
+        }
+
+        .container{
+            padding:15px;
+        }
+
+        .box{
+            background:white;
+            margin:12px 0;
+            padding:15px;
+            border-radius:12px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .gallery{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap:10px;
+        }
+
+        .item{
+            background:#ffe6ee;
+            padding:10px;
+            border-radius:10px;
+            text-align:center;
+            font-weight:bold;
+        }
+
+        button{
+            margin-top:8px;
+            padding:8px;
+            border:none;
+            border-radius:8px;
+            background:#d4145a;
+            color:white;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#fbb03b;
+        }
+
+        input, textarea{
+            width:100%;
+            padding:10px;
+            margin-top:8px;
+            border-radius:8px;
+            border:1px solid #ccc;
+        }
+
+        .btn{
+            display:block;
+            text-align:center;
+            background:#25D366;
+            color:white;
+            padding:12px;
+            border-radius:8px;
+            text-decoration:none;
+            font-weight:bold;
+            margin-top:10px;
+            cursor:pointer;
+        }
+
+        .call-btn{
+            display:block;
+            text-align:center;
+            background:#007bff;
+            color:white;
+            padding:12px;
+            border-radius:8px;
+            text-decoration:none;
+            font-weight:bold;
+            margin-top:10px;
+        }
+
+        footer{
+            text-align:center;
+            padding:15px;
+            background:#fbb03b;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">👗 UZAM FASHION</div>
+    <p>Style ya kisasa • Nguo bora • Bei nafuu</p>
+</header>
+
+<div class="container">
+
+    <!-- ABOUT -->
+    <div class="box">
+        <h2>💖 Karibu Uzam Fashion</h2>
+        <p>Tunauza nguo za kisasa kwa wanawake na wanaume kwa bei nafuu na ubora wa juu.</p>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="box">
+        <h2>🛍️ Bidhaa Zetu</h2>
+
+        <div class="gallery">
+
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38" width="100%" style="border-radius:10px;">
+                👗 Gauni
+                <br>
+                <button onclick="addToCart('Gauni')">Add to Cart</button>
+            </div>
+
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd15" width="100%" style="border-radius:10px;">
+                👕 Mashati
+                <br>
+                <button onclick="addToCart('Shati')">Add to Cart</button>
+            </div>
+
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475" width="100%" style="border-radius:10px;">
+                👖 Suruali
+                <br>
+                <button onclick="addToCart('Suruali')">Add to Cart</button>
+            </div>
+
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1528701800489-20be3c5d5a1b" width="100%" style="border-radius:10px;">
+                👠 Viatu
+                <br>
+                <button onclick="addToCart('Viatu')">Add to Cart</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ORDER -->
+    <div class="box">
+        <h2>🛒 Agiza Sasa</h2>
+
+        <input type="text" id="name" placeholder="Jina lako">
+        <input type="text" id="phone" placeholder="Namba ya simu">
+        <textarea id="location" placeholder="Mahali ulipo"></textarea>
+
+        <button class="btn" onclick="orderNow()">Tuma Order WhatsApp</button>
+
+        <a class="call-btn" href="tel:+255625063532">📞 Piga Simu Sasa</a>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="box">
+        <h2>📞 Mawasiliano</h2>
+        <p>WhatsApp: 0746748790</p>
+        <p>Simu: 0625063532</p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Uzam Fashion | All Rights Reserved ✨
+</footer>
+
+<script>
+
+let cart = [];
+
+function addToCart(item){
+    cart.push(item);
+    alert(item + " imeongezwa kwenye cart 🛒");
+}
+
+function orderNow(){
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let location = document.getElementById("location").value;
+
+    let message =
+`🛍️ ORDER YA UZAM FASHION
+
+Jina: ${name}
+Simu: ${phone}
+Mahali: ${location}
+
+Bidhaa:
+- ${cart.join("\n- ")}`;
+
+    let whatsapp = "https://wa.me/255746748790?text=" + encodeURIComponent(message);
+
+    window.open(whatsapp, "_blank");
+}
+
+</script>
+
+</body>
+</html>
