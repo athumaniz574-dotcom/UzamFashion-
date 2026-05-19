@@ -1,186 +1,434 @@
 <!DOCTYPE html>
-<html>
+<html lang="sw">
 <head>
-    <title>Uzam Fashion</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UZAM FASHION TANZANIA</title>
 
-    <style>
-        body{
-            margin:0;
-            font-family: Arial, sans-serif;
-            background:#fffafc;
-        }
+<style>
 
-        header{
-            background: linear-gradient(90deg, #d4145a, #fbb03b);
-            color:white;
-            text-align:center;
-            padding:25px;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        .logo{
-            font-size:30px;
-            font-weight:bold;
-            letter-spacing:2px;
-        }
+body{
+    font-family:Arial,sans-serif;
+    background:#fff5f7;
+    color:#222;
+}
 
-        .container{
-            padding:15px;
-        }
+/* HEADER */
 
-        .box{
-            background:white;
-            margin:12px 0;
-            padding:15px;
-            border-radius:12px;
-            box-shadow:0 2px 8px rgba(0,0,0,0.1);
-        }
+header{
+    background:linear-gradient(90deg,#3b0066,#ffb300);
+    text-align:center;
+    padding:30px 15px;
+    color:white;
+}
 
-        .gallery{
-            display:grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap:10px;
-        }
+header img{
+    width:180px;
+    background:white;
+    padding:10px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
 
-        .item{
-            background:#ffe6ee;
-            padding:10px;
-            border-radius:10px;
-            text-align:center;
-            font-weight:bold;
-        }
+header p{
+    margin-top:15px;
+    font-size:18px;
+    font-weight:bold;
+}
 
-        button{
-            margin-top:8px;
-            padding:8px;
-            border:none;
-            border-radius:8px;
-            background:#d4145a;
-            color:white;
-            cursor:pointer;
-        }
+/* OFFER */
 
-        button:hover{
-            background:#fbb03b;
-        }
+.offer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:12px;
+    font-weight:bold;
+    font-size:15px;
+}
 
-        input, textarea{
-            width:100%;
-            padding:10px;
-            margin-top:8px;
-            border-radius:8px;
-            border:1px solid #ccc;
-        }
+/* CONTAINER */
 
-        .btn{
-            display:block;
-            text-align:center;
-            background:#25D366;
-            color:white;
-            padding:12px;
-            border-radius:8px;
-            text-decoration:none;
-            font-weight:bold;
-            margin-top:10px;
-            cursor:pointer;
-        }
+.container{
+    padding:15px;
+}
 
-        .call-btn{
-            display:block;
-            text-align:center;
-            background:#007bff;
-            color:white;
-            padding:12px;
-            border-radius:8px;
-            text-decoration:none;
-            font-weight:bold;
-            margin-top:10px;
-        }
+/* BOX */
 
-        footer{
-            text-align:center;
-            padding:15px;
-            background:#fbb03b;
-            color:white;
-        }
-    </style>
+.box{
+    background:white;
+    padding:20px;
+    border-radius:18px;
+    margin-bottom:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.box h2{
+    margin-bottom:15px;
+    color:#3b0066;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:15px;
+}
+
+/* PRODUCT CARD */
+
+.item{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 3px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.item:hover{
+    transform:translateY(-5px);
+}
+
+.item img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.info{
+    padding:12px;
+    text-align:center;
+}
+
+.info h3{
+    margin-bottom:12px;
+    color:#333;
+}
+
+/* BUTTON */
+
+button{
+    width:100%;
+    padding:11px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(90deg,#3b0066,#ffb300);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* INPUTS */
+
+input, textarea{
+    width:100%;
+    padding:13px;
+    margin-top:10px;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+/* WHATSAPP BUTTON */
+
+.btn{
+    background:#25D366;
+    margin-top:12px;
+}
+
+/* CALL BUTTON */
+
+.call-btn{
+    display:block;
+    text-align:center;
+    background:#007bff;
+    color:white;
+    padding:14px;
+    border-radius:10px;
+    text-decoration:none;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+/* CART */
+
+.cart-box{
+    background:#fff0f5;
+    padding:15px;
+    border-radius:12px;
+    line-height:1.8;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:600px){
+
+header img{
+    width:140px;
+}
+
+.item img{
+    height:180px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
-    <div class="logo">👗 UZAM FASHION</div>
-    <p>Style ya kisasa • Nguo bora • Bei nafuu</p>
+
+<img src="1000020273.png">
+
+<p>
+Mitumba ya Kisasa • Mabaro • Viatu • Mikoba • New Collection
+</p>
+
 </header>
+
+<!-- OFFER -->
+
+<div class="offer">
+🔥 New Arrival Zinapatikana Sasa • Order Haraka Uzam Fashion 🔥
+</div>
 
 <div class="container">
 
-    <!-- ABOUT -->
-    <div class="box">
-        <h2>💖 Karibu Uzam Fashion</h2>
-        <p>Tunauza nguo za kisasa kwa wanawake na wanaume kwa bei nafuu na ubora wa juu.</p>
-    </div>
+<!-- ABOUT -->
 
-    <!-- PRODUCTS -->
-    <div class="box">
-        <h2>🛍️ Bidhaa Zetu</h2>
+<div class="box">
 
-        <div class="gallery">
+<h2>💖 Karibu Uzam Fashion Tanzania</h2>
 
-            <div class="item">
-                <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38" width="100%" style="border-radius:10px;">
-                👗 Gauni
-                <br>
-                <button onclick="addToCart('Gauni')">Add to Cart</button>
-            </div>
+<p style="line-height:1.8;">
 
-            <div class="item">
-                <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd15" width="100%" style="border-radius:10px;">
-                👕 Mashati
-                <br>
-                <button onclick="addToCart('Shati')">Add to Cart</button>
-            </div>
+Tunauza nguo za mitumba za kisasa na zenye ubora kwa:
 
-            <div class="item">
-                <img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475" width="100%" style="border-radius:10px;">
-                👖 Suruali
-                <br>
-                <button onclick="addToCart('Suruali')">Add to Cart</button>
-            </div>
+<br><br>
 
-            <div class="item">
-                <img src="https://images.unsplash.com/photo-1528701800489-20be3c5d5a1b" width="100%" style="border-radius:10px;">
-                👠 Viatu
-                <br>
-                <button onclick="addToCart('Viatu')">Add to Cart</button>
-            </div>
+👗 Wanawake  
+<br>
+👕 Wanaume  
+<br>
+🧒 Watoto  
+<br>
+👟 Viatu vya kisasa  
+<br>
+👜 Mikoba ya fashion  
+<br>
+🔥 Mabaro ya mitumba  
+<br>
+✨ Nguo za special collection  
 
-        </div>
-    </div>
+<br><br>
 
-    <!-- ORDER -->
-    <div class="box">
-        <h2>🛒 Agiza Sasa</h2>
+Tunapokea order kutoka maeneo mbalimbali Tanzania 🇹🇿
 
-        <input type="text" id="name" placeholder="Jina lako">
-        <input type="text" id="phone" placeholder="Namba ya simu">
-        <textarea id="location" placeholder="Mahali ulipo"></textarea>
-
-        <button class="btn" onclick="orderNow()">Tuma Order WhatsApp</button>
-
-        <a class="call-btn" href="tel:+255625063532">📞 Piga Simu Sasa</a>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="box">
-        <h2>📞 Mawasiliano</h2>
-        <p>WhatsApp: 0746748790</p>
-        <p>Simu: 0625063532</p>
-    </div>
+</p>
 
 </div>
 
+<!-- CATEGORIES -->
+
+<div class="box">
+
+<h2>🛍️ Categories Zetu</h2>
+
+<div class="gallery">
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c">
+<div class="info">
+<h3>👗 Nguo za Kike</h3>
+<button onclick="addToCart('Nguo za Kike')">
+Order Sasa
+</button>
+</div>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+<div class="info">
+<h3>👕 Nguo za Kiume</h3>
+<button onclick="addToCart('Nguo za Kiume')">
+Order Sasa
+</button>
+</div>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea">
+<div class="info">
+<h3>🧒 Nguo za Watoto</h3>
+<button onclick="addToCart('Nguo za Watoto')">
+Order Sasa
+</button>
+</div>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
+<div class="info">
+<h3>👟 Viatu</h3>
+<button onclick="addToCart('Viatu')">
+Order Sasa
+</button>
+</div>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b">
+<div class="info">
+<h3>👜 Mikoba</h3>
+<button onclick="addToCart('Mikoba')">
+Order Sasa
+</button>
+</div>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b">
+<div class="info">
+<h3>🔥 Mabaro ya Mitumba</h3>
+<button onclick="addToCart('Mabaro ya Mitumba')">
+Order Sasa
+</button>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- NEW COLLECTION -->
+
+<div class="box">
+
+<h2>🔥 New Collection</h2>
+
+<div class="gallery">
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f">
+<div class="info">
+<h3>✨ Special Dress</h3>
+<button onclick="addToCart('Special Dress')">
+Order Sasa
+</button>
+</div>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+<div class="info">
+<h3>👖 Jeans Kali</h3>
+<button onclick="addToCart('Jeans Kali')">
+Order Sasa
+</button>
+</div>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234">
+<div class="info">
+<h3>🔥 Cargo Pants</h3>
+<button onclick="addToCart('Cargo Pants')">
+Order Sasa
+</button>
+</div>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf">
+<div class="info">
+<h3>🧥 Hoodie Baro</h3>
+<button onclick="addToCart('Hoodie Baro')">
+Order Sasa
+</button>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- CART -->
+
+<div class="box">
+
+<h2>🛒 Cart</h2>
+
+<div class="cart-box" id="cartItems">
+Hakuna bidhaa kwenye cart.
+</div>
+
+</div>
+
+<!-- ORDER -->
+
+<div class="box">
+
+<h2>📦 Agiza Sasa</h2>
+
+<input type="text" id="name" placeholder="Jina lako">
+
+<input type="text" id="phone" placeholder="Namba ya simu">
+
+<textarea id="location" placeholder="Mahali ulipo"></textarea>
+
+<button class="btn" onclick="orderNow()">
+Tuma Order WhatsApp
+</button>
+
+<a class="call-btn" href="tel:+255625063532">
+📞 Piga Simu Sasa
+</a>
+
+</div>
+
+<!-- CONTACT -->
+
+<div class="box">
+
+<h2>📞 Mawasiliano</h2>
+
+<p>📱 WhatsApp: 0746748790</p>
+<p>📞 Simu: 0625063532</p>
+<p>📍 Tanzania</p>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
 <footer>
-    © 2026 Uzam Fashion | All Rights Reserved ✨
+© 2026 Uzam Fashion Tanzania | Style Yako, Ubora Wetu 🔥
 </footer>
 
 <script>
@@ -188,31 +436,46 @@
 let cart = [];
 
 function addToCart(item){
-    cart.push(item);
-    alert(item + " imeongezwa kwenye cart 🛒");
+
+cart.push(item);
+
+document.getElementById("cartItems").innerHTML =
+"🛒 Bidhaa kwenye cart:<br><br>" + cart.join("<br>");
+
+alert(item + " imeongezwa kwenye cart 🔥");
+
 }
 
 function orderNow(){
-    let name = document.getElementById("name").value;
-    let phone = document.getElementById("phone").value;
-    let location = document.getElementById("location").value;
 
-    let message =
+let name = document.getElementById("name").value;
+
+let phone = document.getElementById("phone").value;
+
+let location = document.getElementById("location").value;
+
+let message =
 `🛍️ ORDER YA UZAM FASHION
 
 Jina: ${name}
+
 Simu: ${phone}
+
 Mahali: ${location}
 
 Bidhaa:
 - ${cart.join("\n- ")}`;
 
-    let whatsapp = "https://wa.me/255746748790?text=" + encodeURIComponent(message);
+let whatsapp =
+"https://wa.me/255746748790?text=" + encodeURIComponent(message);
 
-    window.open(whatsapp, "_blank");
+window.open(whatsapp,'_blank');
+
 }
 
 </script>
 
 </body>
 </html>
+
+website updated
